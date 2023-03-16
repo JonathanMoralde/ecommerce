@@ -1,0 +1,14 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.display-container {
+  padding-top: 4rem;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
