@@ -35,7 +35,6 @@ if(isset($_GET['item_id'])){
             <div class="col-md-6 mx-auto">
 
             <!-- update Form -->
-            <h3><?php $item_name ?></h3>
                 <form action="./update.php" method="post">
                     <input type="text" hidden name="u_itemid" value="<?php echo $item_id; ?>" class="form-control">
                     <div class="form-floating mb-3">
