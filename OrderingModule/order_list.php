@@ -16,10 +16,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 <body>
-    <section class="container py-5">
+    <section class="container my-5 py-3 bg-white rounded shadow">
         <a href="../index.php" class="btn btn-secondary">Back</a>
         <h1 class="title text-center mb-3 text-uppercase">Order List</h1>
 

@@ -24,13 +24,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 <body>
-    <div class="container py-5">
+    <div class="container my-5 py-5 bg-white rounded shadow w-50">
         <h3 class="section-title text-center my-5 text-uppercase">Checkout</h3>
         <div class="row">
-            <div class="col-md-6 mx-auto">
+            <div class="col-md-8 mx-auto">
 
                 <form method="post" action="./process_order.php">
                     <input type="hidden" name="item_id" value="<?php echo $item_id; ?>">
@@ -57,33 +57,12 @@
                         <textarea class="form-control" placeholder="Enter Address" id="floatingTextarea" name="address" required></textarea>
                         <label for="floatingTextarea">Address</label>
                     </div>
-                    <div class="d-flex justify-content-center">
+                    <div class="d-flex justify-content-center mt-4">
 
                         <a href="./shop.php" class="btn btn-secondary me-3">Cancel Order</a>
                         <button type="submit" name="submit_order" class="btn btn-primary">Submit Order</button>
                     </div>
             
-                <!-- <div class="form-floating">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" name="username" id="username" required>
-                </div>
-                <div class="form-floating">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" name="password" id="password" required>
-                </div>
-                <div class="form-floating">
-                    <label for="fullname">Full Name</label>
-                    <input type="text" class="form-control" name="fullname" id="fullname" required>
-                </div>
-                <div class="form-floating">
-                    <label for="contact_number">Contact Number</label>
-                    <input type="text" class="form-control" name="contact_number" id="contact_number" required>
-                </div>
-                <div class="form-floating">
-                    <label for="address">Address</label>
-                    <textarea class="form-control" name="address" id="address" required></textarea>
-                </div>
-                <button type="submit" name="submit_order" class="btn btn-primary">Submit Order</button> -->
                 </form>
             </div>
         </div>

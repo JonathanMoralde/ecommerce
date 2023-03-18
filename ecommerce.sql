@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 16, 2023 at 04:07 PM
+-- Generation Time: Mar 18, 2023 at 03:04 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -32,9 +32,19 @@ CREATE TABLE `orders` (
   `user_id` int(11) NOT NULL,
   `item_id` int(11) NOT NULL,
   `item_qty` int(100) NOT NULL,
-  `date_ordered` date NOT NULL,
-  `order_status` varchar(1) NOT NULL
+  `date_ordered` date NOT NULL DEFAULT current_timestamp(),
+  `order_status` varchar(1) NOT NULL DEFAULT 'P'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`order_id`, `user_id`, `item_id`, `item_qty`, `date_ordered`, `order_status`) VALUES
+(1, 3, 24, 1, '2023-03-17', 'P'),
+(2, 4, 1, 1, '2023-03-17', 'P'),
+(3, 5, 1, 1, '2023-03-17', 'P'),
+(4, 6, 1, 3, '2023-03-18', 'P');
 
 -- --------------------------------------------------------
 
@@ -56,11 +66,7 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`item_id`, `item_name`, `item_price`, `item_status`, `date_added`) VALUES
 (1, 'Magnum', '61.00', 'A', '2023-03-10'),
-(24, 'SIsig', '150.00', 'A', '2023-03-16'),
-(25, 'Test1', '1233.00', 'A', '2023-03-16'),
-(26, 'Test2', '321.00', 'A', '2023-03-16'),
-(27, 'test3', '231.00', 'A', '2023-03-16'),
-(28, 'Test4', '4321.00', 'A', '2023-03-16');
+(24, 'SIsig', '150.00', 'A', '2023-03-16');
 
 -- --------------------------------------------------------
 
@@ -73,8 +79,21 @@ CREATE TABLE `users` (
   `username` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   `fullname` varchar(100) NOT NULL,
-  `user_status` varchar(1) NOT NULL
+  `contact_number` int(11) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `user_status` varchar(1) NOT NULL DEFAULT 'A'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `username`, `password`, `fullname`, `contact_number`, `address`, `user_status`) VALUES
+(2, 'test', 'test123123', 'testtest', 909090990, 'oinosadfmanilasdf', 'A'),
+(3, 'tantan', 'paswer123', 'jonathan moralde', 921980042, 'zone 3, anayan, pili, camarines sur', 'A'),
+(4, 'test4', 'test123123', 'testestest', 2147483647, 'lalasdlflaskdfkasd', 'A'),
+(5, 'yesysey', '12312312312', '53stseyes', 2147483647, 'tesyes123123', 'A'),
+(6, 'Jonathan', '123123123', 'JonathanMoralde', 1231231231, 'POlanguensyo', 'A');
 
 --
 -- Indexes for dumped tables
@@ -108,19 +127,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables

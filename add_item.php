@@ -22,49 +22,36 @@ include_once 'connect.php';
     <link rel="stylesheet" href="./CSS/styles.css">
 </head>
 <body>
+   
 
-    <div class="container py-5">
-        <h3 class="section-title text-center my-5 text-uppercase">Add New Product</h3>
-        
-        <div class="row">
-            <div class="col-md-6 mx-auto">
-                <!-- notif -->
-            <?php
-                     if(isset($_GET['new_item'])){
-                            switch($_GET['new_item']){
-                                case "added": echo "<div class='alert alert-success'>User Added.</div>";
-                                // Clear form inputs
-                                $name = '';
-                                $price = '';
-                                      break;
-                                case "failed":  echo "<div class='alert alert-danger'>User Not Added</div>";
-                                      break;
-                                        
-                            }
-                       }
-                ?>
-
-            <!-- add Form -->
-                <form action="./new_item.php" method="post">
-                    <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Enter Name" name="name" value="<?php echo isset($_POST['name']) ? $_POST['name'] : ''; ?>">
-                    <label for="floatingInput">Product Name</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingPrice" placeholder="Price" name="price" value="<?php echo isset($_POST['price']) ? $_POST['name'] : ''; ?>">
-                    <label for="floatingPrice">Price</label>
-                    </div>
-                    <!-- Submit -->
-                    <div class="btn-container d-flex justify-content-center ">
-                        <a href="./index.php" class="btn btn-secondary me-3 text-uppercase">Cancel</a>
-                        <button type="submit" class="btn btn-primary text-uppercase" name="submit">Add New</button>
-                    </div>
-                </form>
-
+        <div class="container my-5 py-5 bg-white shadow rounded w-50">
+            <h3 class="section-title text-center mb-3 text-uppercase">Add New Product</h3>
+            
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+    
+                <!-- add Form -->
+                    <form action="./new_item.php" method="post">
+                        <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Enter Name" name="name" value="<?php echo isset($_POST['name']) ? $_POST['name'] : ''; ?>">
+                        <label for="floatingInput">Product Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingPrice" placeholder="Price" name="price" value="<?php echo isset($_POST['price']) ? $_POST['name'] : ''; ?>">
+                        <label for="floatingPrice">Price</label>
+                        </div>
+                        <!-- Submit -->
+                        <div class="btn-container d-flex justify-content-center ">
+                            <a href="./index.php" class="btn btn-secondary me-3 text-uppercase">Cancel</a>
+                            <button type="submit" class="btn btn-primary text-uppercase" name="submit">Add New</button>
+                        </div>
+                    </form>
+    
+                </div>
             </div>
+    
         </div>
-
-    </div>
+    
 
 </body>
 </html>

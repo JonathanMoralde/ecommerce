@@ -1,14 +1,74 @@
+/* Jonathan H. Moralde - BSIT3A */
+
+html {
+  scroll-behavior: smooth;
+  background: radial-gradient(
+      circle at 100% 50%,
+      transparent 20%,
+      rgba(255, 255, 255, 0.3) 21%,
+      rgba(255, 255, 255, 0.3) 34%,
+      transparent 35%,
+      transparent
+    ),
+    radial-gradient(
+        circle at 0% 50%,
+        transparent 20%,
+        rgba(255, 255, 255, 0.3) 21%,
+        rgba(255, 255, 255, 0.3) 34%,
+        transparent 35%,
+        transparent
+      )
+      0 -50px;
+  background-color: slategray;
+  background-size: 75px 100px;
+}
 body {
   font-family: "Poppins", sans-serif;
+  background: transparent;
 }
 
 .display-container {
-  padding-top: 4rem;
+  margin-top: 4rem !important;
+  padding: 2.5rem 1.5rem;
 }
 
 .title {
   text-align: center;
   margin-bottom: 2rem;
   text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.section-title {
   letter-spacing: 2px;
+  font-weight: 500;
+}
+
+/* shop.php */
+.card {
+  background: #f5f5f582 !important;
+  transition: all 0.1s linear;
+}
+.card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15) !important;
+}
+
+/* btn */
+.btn-primary {
+  background: #30cdbc;
+  border-color: #30cdbc;
+}
+.btn-primary:hover {
+  background: #29ad9f;
+  border-color: #29ad9f;
+}
+
+.btn-outline-primary {
+  /* background: #e3933d; */
+  color: #30cdbc;
+  border-color: #30cdbc;
+}
+
+.btn-outline-primary:hover {
+  background: #30cdbc;
+  border-color: #30cdbc;
 }

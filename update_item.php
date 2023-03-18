@@ -29,8 +29,8 @@ if(isset($_GET['item_id'])){
 <body>
     
 
-<div class="container py-5">
-        <h3 class="section-title text-center my-5 text-uppercase">Update Product</h3>
+<div class="container my-5 py-5 bg-white rounded shadow w-50">
+        <h3 class="section-title text-center mb-3 text-uppercase">Update Product</h3>
         <div class="row">
             <div class="col-md-6 mx-auto">
 
