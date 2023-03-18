@@ -33,11 +33,11 @@ include_once 'connect.php';
                 <!-- add Form -->
                     <form action="./new_item.php" method="post">
                         <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Enter Name" name="name" value="<?php echo isset($_POST['name']) ? $_POST['name'] : ''; ?>">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Enter Name" name="name" >
                         <label for="floatingInput">Product Name</label>
                         </div>
                         <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingPrice" placeholder="Price" name="price" value="<?php echo isset($_POST['price']) ? $_POST['name'] : ''; ?>">
+                        <input type="text" class="form-control" id="floatingPrice" placeholder="Price" name="price" >
                         <label for="floatingPrice">Price</label>
                         </div>
                         <!-- Submit -->
